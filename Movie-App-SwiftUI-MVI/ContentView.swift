@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, David's world!")
-            .padding()
+        
+        
+        TabView {
+            NavigationView {
+                HomeView().navigationBarTitle("Home", displayMode: .inline)
+                 
+            }   .tabItem { Label("Home", systemImage: "house.fill")}
+            
+            NavigationView {
+                FavoriteView().navigationBarTitle("Favorites", displayMode: .inline)
+                   
+            } .tabItem { Label("Favorites", systemImage: "heart.fill")}
+           
+        }.accentColor(Color.blue)
     }
 }
 

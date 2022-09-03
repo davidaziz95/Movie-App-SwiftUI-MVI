@@ -11,6 +11,19 @@
 		BE9664AA28C2D9BE00084A96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664A928C2D9BE00084A96 /* ContentView.swift */; };
 		BE9664AC28C2D9C000084A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9664AB28C2D9C000084A96 /* Assets.xcassets */; };
 		BE9664AF28C2D9C000084A96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9664AE28C2D9C000084A96 /* Preview Assets.xcassets */; };
+		BE9664B628C2E0E500084A96 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664B528C2E0E500084A96 /* HomeView.swift */; };
+		BE9664B828C2E10D00084A96 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664B728C2E10D00084A96 /* FavoriteView.swift */; };
+		BE9664BE28C2E25100084A96 /* BarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664BD28C2E25100084A96 /* BarModifier.swift */; };
+		BE9664C128C2E38400084A96 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664C028C2E38400084A96 /* RxCocoa */; };
+		BE9664C328C2E38400084A96 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664C228C2E38400084A96 /* RxRelay */; };
+		BE9664C528C2E38400084A96 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664C428C2E38400084A96 /* RxSwift */; };
+		BE9664C928C2E41400084A96 /* MovieRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664C828C2E41400084A96 /* MovieRepo.swift */; };
+		BE9664CC28C2E42E00084A96 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664CB28C2E42E00084A96 /* MovieModel.swift */; };
+		BE9664CF28C2E77000084A96 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664CE28C2E77000084A96 /* Alamofire */; };
+		BE9664D228C2E7C300084A96 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664D128C2E7C300084A96 /* HomePageViewModel.swift */; };
+		BE9664D528C2EA3800084A96 /* ErrorCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664D428C2EA3800084A96 /* ErrorCase.swift */; };
+		BE9664D828C2EFB200084A96 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664D728C2EFB200084A96 /* Kingfisher */; };
+		BE9664DB28C2F01600084A96 /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664DA28C2F01600084A96 /* MovieCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +32,14 @@
 		BE9664A928C2D9BE00084A96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE9664AB28C2D9C000084A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE9664AE28C2D9C000084A96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE9664B528C2E0E500084A96 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BE9664B728C2E10D00084A96 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		BE9664BD28C2E25100084A96 /* BarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarModifier.swift; sourceTree = "<group>"; };
+		BE9664C828C2E41400084A96 /* MovieRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepo.swift; sourceTree = "<group>"; };
+		BE9664CB28C2E42E00084A96 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		BE9664D128C2E7C300084A96 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		BE9664D428C2EA3800084A96 /* ErrorCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCase.swift; sourceTree = "<group>"; };
+		BE9664DA28C2F01600084A96 /* MovieCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +47,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9664C528C2E38400084A96 /* RxSwift in Frameworks */,
+				BE9664CF28C2E77000084A96 /* Alamofire in Frameworks */,
+				BE9664C328C2E38400084A96 /* RxRelay in Frameworks */,
+				BE9664C128C2E38400084A96 /* RxCocoa in Frameworks */,
+				BE9664D828C2EFB200084A96 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +77,12 @@
 		BE9664A628C2D9BE00084A96 /* Movie-App-SwiftUI-MVI */ = {
 			isa = PBXGroup;
 			children = (
+				BE9664D328C2EA2B00084A96 /* Helpers */,
+				BE9664D028C2E7A200084A96 /* ViewModels */,
+				BE9664CA28C2E42400084A96 /* Models */,
+				BE9664C728C2E3F900084A96 /* Repos */,
+				BE9664C628C2E39C00084A96 /* Views */,
+				BE9664BC28C2E24200084A96 /* Modifiers */,
 				BE9664A728C2D9BE00084A96 /* Movie_App_SwiftUI_MVIApp.swift */,
 				BE9664A928C2D9BE00084A96 /* ContentView.swift */,
 				BE9664AB28C2D9C000084A96 /* Assets.xcassets */,
@@ -65,6 +97,64 @@
 				BE9664AE28C2D9C000084A96 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE9664BC28C2E24200084A96 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				BE9664BD28C2E25100084A96 /* BarModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		BE9664C628C2E39C00084A96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE9664D928C2EFD600084A96 /* Home */,
+				BE9664B728C2E10D00084A96 /* FavoriteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE9664C728C2E3F900084A96 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				BE9664C828C2E41400084A96 /* MovieRepo.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		BE9664CA28C2E42400084A96 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE9664CB28C2E42E00084A96 /* MovieModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE9664D028C2E7A200084A96 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BE9664D128C2E7C300084A96 /* HomePageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BE9664D328C2EA2B00084A96 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BE9664D428C2EA3800084A96 /* ErrorCase.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BE9664D928C2EFD600084A96 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BE9664B528C2E0E500084A96 /* HomeView.swift */,
+				BE9664DA28C2F01600084A96 /* MovieCard.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +173,13 @@
 			dependencies = (
 			);
 			name = "Movie-App-SwiftUI-MVI";
+			packageProductDependencies = (
+				BE9664C028C2E38400084A96 /* RxCocoa */,
+				BE9664C228C2E38400084A96 /* RxRelay */,
+				BE9664C428C2E38400084A96 /* RxSwift */,
+				BE9664CE28C2E77000084A96 /* Alamofire */,
+				BE9664D728C2EFB200084A96 /* Kingfisher */,
+			);
 			productName = "Movie-App-SwiftUI-MVI";
 			productReference = BE9664A428C2D9BE00084A96 /* Movie-App-SwiftUI-MVI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +208,11 @@
 				Base,
 			);
 			mainGroup = BE96649B28C2D9BE00084A96;
+			packageReferences = (
+				BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				BE9664CD28C2E77000084A96 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BE9664D628C2EFB200084A96 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = BE9664A528C2D9BE00084A96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9664DB28C2F01600084A96 /* MovieCard.swift in Sources */,
+				BE9664CC28C2E42E00084A96 /* MovieModel.swift in Sources */,
+				BE9664B828C2E10D00084A96 /* FavoriteView.swift in Sources */,
+				BE9664B628C2E0E500084A96 /* HomeView.swift in Sources */,
+				BE9664C928C2E41400084A96 /* MovieRepo.swift in Sources */,
+				BE9664D228C2E7C300084A96 /* HomePageViewModel.swift in Sources */,
 				BE9664AA28C2D9BE00084A96 /* ContentView.swift in Sources */,
+				BE9664D528C2EA3800084A96 /* ErrorCase.swift in Sources */,
 				BE9664A828C2D9BE00084A96 /* Movie_App_SwiftUI_MVIApp.swift in Sources */,
+				BE9664BE28C2E25100084A96 /* BarModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +451,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		BE9664CD28C2E77000084A96 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BE9664D628C2EFB200084A96 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE9664C028C2E38400084A96 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		BE9664C228C2E38400084A96 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		BE9664C428C2E38400084A96 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		BE9664CE28C2E77000084A96 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE9664CD28C2E77000084A96 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BE9664D728C2EFB200084A96 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE9664D628C2EFB200084A96 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE96649C28C2D9BE00084A96 /* Project object */;
 }
