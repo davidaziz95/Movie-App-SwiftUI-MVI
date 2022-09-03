@@ -33,6 +33,23 @@ class HomePageViewModel: ObservableObject {
             }
         ).disposed(by: disposableBag)
     }
+    
+    func searchMovies(query: String) {
+        self.uiState = .Loading
+        repository
+            .searchMovies(query: query)
+            .subscribe(
+                onNext: { [weak self] response in
+                    debugPrint(response)
+                    if response.results.isEmpty { self?.uiState = .NoResultsFound }
+                    else { self?.uiState = .Fetched(response) }
+                },
+                onError: { error in
+                    debugPrint(error)
+                    self.uiState = .ApiError("Results could not be fetched")
+            }
+        ).disposed(by: disposableBag)
+    }
 }
 
 enum HomePageState {

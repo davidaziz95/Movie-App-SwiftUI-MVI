@@ -14,7 +14,8 @@ class MovieRepo {
     func createRequest<T: Codable>(url: String) -> Observable<T> {
         
         let observable = Observable<T>.create { observer -> Disposable in
-            AF.request(url)
+            AF
+                .request(url.replacingOccurrences(of: " ", with: "%20"))
                 .validate()
                 .responseJSON { response in
                     switch response.result {
@@ -33,15 +34,16 @@ class MovieRepo {
                     }
             }
             return Disposables.create()
-        }
-        observable
-        .observe(on: MainScheduler.instance)
-        
+        }.observe(on: MainScheduler.instance)
         return observable
     }
     
     
     func fetchMovies() -> Observable<Movies> {
-        return createRequest(url: "https://api.themoviedb.org/3/movie/popular?api_key=5ec2b35ce120a5e3a91c05d25a75a3ba&language=en-US&page=1")
+        return createRequest(url: "https://api.themoviedb.org/3/movie/popular?api_key=5ec2b35ce120a5e3a91c05d25a75a3ba&language=en-US&page=2")
+    }
+    
+    func searchMovies(query: String) -> Observable<Movies> {
+        return createRequest(url: "https://api.themoviedb.org/3/search/movie?api_key=5ec2b35ce120a5e3a91c05d25a75a3ba&language=en-US&query=\(query)")
     }
 }

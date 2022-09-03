@@ -12,15 +12,11 @@ struct ContentView: View {
         
         
         TabView {
-            NavigationView {
-                HomeView().navigationBarTitle("Home", displayMode: .inline)
-                 
-            }   .tabItem { Label("Home", systemImage: "house.fill")}
+                HomeView()
+            .tabItem { Label("Home", systemImage: "house.fill")}
             
-            NavigationView {
                 FavoriteView().navigationBarTitle("Favorites", displayMode: .inline)
-                   
-            } .tabItem { Label("Favorites", systemImage: "heart.fill")}
+            .tabItem { Label("Favorites", systemImage: "heart.fill")}
            
         }.accentColor(Color.blue)
     }

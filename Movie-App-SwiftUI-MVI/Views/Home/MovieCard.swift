@@ -11,28 +11,44 @@ import Kingfisher
 struct MovieCard: View {
     
     let movie: Movie
+    @State var isSelected = false
     
     var body: some View {
         
-        HStack(alignment: .center, spacing: 25) {
-            KFImage(URL(string: "https://image.tmdb.org/t/p/w300/\(movie.poster_path ?? "")"))
-                .resizable()
-                .frame(width: 100, height: 150)
-                .cornerRadius(20)
-//            Spacer()
+        HStack(alignment: .center, spacing: 20) {
+            
+            ZStack(alignment: .topTrailing) {
+                KFImage(URL(string: "https://image.tmdb.org/t/p/w300/\(movie.poster_path ?? "")"))
+                    .resizable()
+                    .frame(width: 100, height: 150)
+                    .cornerRadius(20)
+             
+                if movie.poster_path != nil {
+                    Rectangle()
+                        .fill(LinearGradient(colors: [Color.black.opacity(0.8), Color.white], startPoint: .top, endPoint: .bottom))
+                        .cornerRadius(20, corners: [.topLeft, .topRight])
+                        .frame(width: 100 , height: 50).blendMode(.multiply)
+                }
+                Button {
+                    isSelected.toggle()
+                } label: {
+                    Image(systemName: isSelected ? "heart.fill" : "heart")
+                        .font(.system(size: 25))
+                        .foregroundColor(Color.red)
+                }.padding(8)
+            }
+            
             VStack(alignment: .leading) {
-                HStack {
                     Text(movie.title)
                         .frame(alignment: Alignment.topLeading)
                         .foregroundColor(.black)
-                        .font(.subheadline)
-                }
+                        .font(.headline)
                 Text(movie.overview)
                     .foregroundColor(.gray)
                     .frame(width: 250, alignment: .topLeading)
                     .lineLimit(3)
+                
             }
-//            .padding()
         }
     }
 }

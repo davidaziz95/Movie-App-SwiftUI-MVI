@@ -24,6 +24,10 @@
 		BE9664D528C2EA3800084A96 /* ErrorCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664D428C2EA3800084A96 /* ErrorCase.swift */; };
 		BE9664D828C2EFB200084A96 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664D728C2EFB200084A96 /* Kingfisher */; };
 		BE9664DB28C2F01600084A96 /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664DA28C2F01600084A96 /* MovieCard.swift */; };
+		BE9664DD28C3846F00084A96 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664DC28C3846F00084A96 /* RoundedCorner.swift */; };
+		BE9664E028C3849600084A96 /* RoundedCorner-ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664DF28C3849600084A96 /* RoundedCorner-ext.swift */; };
+		BE9664E228C38D6600084A96 /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664E128C38D6600084A96 /* Debounce.swift */; };
+		BE9664E428C3BEDA00084A96 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664E328C3BEDA00084A96 /* MovieDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		BE9664D128C2E7C300084A96 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		BE9664D428C2EA3800084A96 /* ErrorCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCase.swift; sourceTree = "<group>"; };
 		BE9664DA28C2F01600084A96 /* MovieCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
+		BE9664DC28C3846F00084A96 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		BE9664DF28C3849600084A96 /* RoundedCorner-ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoundedCorner-ext.swift"; sourceTree = "<group>"; };
+		BE9664E128C38D6600084A96 /* Debounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debounce.swift; sourceTree = "<group>"; };
+		BE9664E328C3BEDA00084A96 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		BE9664A628C2D9BE00084A96 /* Movie-App-SwiftUI-MVI */ = {
 			isa = PBXGroup;
 			children = (
+				BE9664DE28C3848200084A96 /* Extensions */,
 				BE9664D328C2EA2B00084A96 /* Helpers */,
 				BE9664D028C2E7A200084A96 /* ViewModels */,
 				BE9664CA28C2E42400084A96 /* Models */,
@@ -103,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BE9664BD28C2E25100084A96 /* BarModifier.swift */,
+				BE9664DC28C3846F00084A96 /* RoundedCorner.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -144,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				BE9664D428C2EA3800084A96 /* ErrorCase.swift */,
+				BE9664E128C38D6600084A96 /* Debounce.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -153,8 +164,17 @@
 			children = (
 				BE9664B528C2E0E500084A96 /* HomeView.swift */,
 				BE9664DA28C2F01600084A96 /* MovieCard.swift */,
+				BE9664E328C3BEDA00084A96 /* MovieDetails.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		BE9664DE28C3848200084A96 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE9664DF28C3849600084A96 /* RoundedCorner-ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9664DB28C2F01600084A96 /* MovieCard.swift in Sources */,
+				BE9664E428C3BEDA00084A96 /* MovieDetails.swift in Sources */,
 				BE9664CC28C2E42E00084A96 /* MovieModel.swift in Sources */,
+				BE9664E028C3849600084A96 /* RoundedCorner-ext.swift in Sources */,
 				BE9664B828C2E10D00084A96 /* FavoriteView.swift in Sources */,
 				BE9664B628C2E0E500084A96 /* HomeView.swift in Sources */,
 				BE9664C928C2E41400084A96 /* MovieRepo.swift in Sources */,
@@ -248,6 +270,8 @@
 				BE9664AA28C2D9BE00084A96 /* ContentView.swift in Sources */,
 				BE9664D528C2EA3800084A96 /* ErrorCase.swift in Sources */,
 				BE9664A828C2D9BE00084A96 /* Movie_App_SwiftUI_MVIApp.swift in Sources */,
+				BE9664E228C38D6600084A96 /* Debounce.swift in Sources */,
+				BE9664DD28C3846F00084A96 /* RoundedCorner.swift in Sources */,
 				BE9664BE28C2E25100084A96 /* BarModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
