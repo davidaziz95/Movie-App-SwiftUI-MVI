@@ -22,7 +22,7 @@ struct MovieCard: View {
                     .resizable()
                     .frame(width: 100, height: 150)
                     .cornerRadius(20)
-             
+                
                 if movie.poster_path != nil {
                     Rectangle()
                         .fill(LinearGradient(colors: [Color.black.opacity(0.8), Color.white], startPoint: .top, endPoint: .bottom))
@@ -39,13 +39,14 @@ struct MovieCard: View {
             }
             
             VStack(alignment: .leading) {
-                    Text(movie.title)
-                        .frame(alignment: Alignment.topLeading)
-                        .foregroundColor(.black)
-                        .font(.headline)
+                Text(movie.title)
+                    .frame(alignment: Alignment.topLeading)
+                    .foregroundColor(.black)
+                    .font(.headline)
                 Text(movie.overview)
                     .foregroundColor(.gray)
                     .frame(width: 250, alignment: .topLeading)
+                    .multilineTextAlignment(.leading)
                     .lineLimit(3)
                 
             }
