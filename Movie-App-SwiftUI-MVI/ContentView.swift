@@ -8,22 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        
-        
-        TabView {
-                HomeView()
-            .tabItem { Label("Home", systemImage: "house.fill")}
-            
-                FavoriteView().navigationBarTitle("Favorites", displayMode: .inline)
-            .tabItem { Label("Favorites", systemImage: "heart.fill")}
-           
-        }.accentColor(Color.blue)
+        NavigationView {
+                HomeView().navigationTitle("Home").navigationBarTitleDisplayMode(.large)
+        }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }

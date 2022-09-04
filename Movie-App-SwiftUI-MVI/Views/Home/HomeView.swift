@@ -14,7 +14,6 @@ struct HomeView: View {
     @ObservedObject var vm: HomePageViewModel = HomePageViewModel()
     
     var body: some View {
-        
         Group { () -> AnyView in
             
             switch vm.uiState {
@@ -25,10 +24,14 @@ struct HomeView: View {
                 
             case .Fetched(let moviesResult):
                 return AnyView(
-                    ScrollView(.vertical, showsIndicators: true) {
+                    ScrollView(.vertical, showsIndicators: false) {
                         VStack { ForEach(moviesResult.results) { movie in
-                            NavigationLink(destination: MovieDetails()) { MovieCard(movie: movie) }
+                            NavigationLink {
+                                MovieDetails(movie: movie)
+                            } label: {
+                                MovieCard(movie: movie)
                             }
+                        }
                         }
                     }
                 )
