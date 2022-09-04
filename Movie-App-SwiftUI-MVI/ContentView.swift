@@ -12,8 +12,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView {
-                HomeView().tabItem { Label("Home", systemImage: "house.fill")}.navigationTitle("Home")
-                FavoriteView().tabItem { Label("Favorites", systemImage: "heart.fill")}.navigationTitle("Favorites")
+                HomeView().tabItem { Label("Home", systemImage: "house.fill")}
             }
         }
     }
