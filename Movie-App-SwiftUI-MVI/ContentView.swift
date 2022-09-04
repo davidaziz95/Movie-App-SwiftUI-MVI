@@ -11,9 +11,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            TabView {
-                HomeView().tabItem { Label("Home", systemImage: "house.fill")}
-            }
+                HomeView().navigationTitle("Home").navigationBarTitleDisplayMode(.large)
         }
     }
     
