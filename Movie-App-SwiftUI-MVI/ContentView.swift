@@ -11,8 +11,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-                HomeView().navigationTitle("Home").navigationBarTitleDisplayMode(.large)
-        }
+            HomeView().navigationTitle(Constants.homePage).navigationBarTitleDisplayMode(.large)
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
     
     struct ContentView_Previews: PreviewProvider {
