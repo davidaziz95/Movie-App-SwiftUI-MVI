@@ -30,8 +30,8 @@ class HomePageViewModel: ObservableObject {
                 onError: { error in
                     debugPrint(error)
                     self.uiState = .ApiError("Results could not be fetched")
-            }
-        ).disposed(by: disposableBag)
+                }
+            ).disposed(by: disposableBag)
     }
     
     func searchMovies(query: String) {
@@ -47,8 +47,8 @@ class HomePageViewModel: ObservableObject {
                 onError: { error in
                     debugPrint(error)
                     self.uiState = .ApiError("Results could not be fetched")
-            }
-        ).disposed(by: disposableBag)
+                }
+            ).disposed(by: disposableBag)
     }
 }
 

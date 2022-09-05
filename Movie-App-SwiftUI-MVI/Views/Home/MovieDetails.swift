@@ -15,7 +15,7 @@ struct MovieDetails: View {
         
         ScrollView {
             HStack(alignment: .center, spacing: 25) {
-                KFImage(URL(string: "https://image.tmdb.org/t/p/w300/\(movie.poster_path ?? "")"))
+                KFImage(URL(string: EndPoints.baseImageURL + (movie.poster_path ?? "")))
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150, alignment: .center)
@@ -28,9 +28,7 @@ struct MovieDetails: View {
             }.padding(.horizontal, 10).padding(.bottom, 20)
             
             HStack {
-                Text("Overview")
-                    .fontWeight(.bold)
-                    .font(.system(size: 26))
+                Text("Overview").fontWeight(.bold).font(.system(size: 26))
                 Spacer()
             }.padding(.horizontal, 10)
             

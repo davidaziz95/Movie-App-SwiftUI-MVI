@@ -25,12 +25,13 @@ struct HomeView: View {
             case .Fetched(let moviesResult):
                 return AnyView(
                     ScrollView(.vertical, showsIndicators: false) {
-                        VStack { ForEach(moviesResult.results) { movie in
+                        LazyVStack { ForEach(moviesResult.results) { movie in
                             NavigationLink {
                                 MovieDetails(movie: movie)
                             } label: {
                                 MovieCard(movie: movie)
-                            }
+                                Divider()
+                            }.buttonStyle(FlatLinkStyle())
                         }
                         }
                     }

@@ -18,7 +18,7 @@ struct MovieCard: View {
         HStack(alignment: .center, spacing: 20) {
             
             ZStack(alignment: .topTrailing) {
-                KFImage(URL(string: "https://image.tmdb.org/t/p/w300/\(movie.poster_path ?? "")"))
+                KFImage(URL(string: EndPoints.baseImageURL + (movie.poster_path ?? "")))
                     .resizable()
                     .frame(width: 100, height: 150)
                     .cornerRadius(20)
@@ -37,7 +37,6 @@ struct MovieCard: View {
                         .foregroundColor(Color.red)
                 }.padding(8)
             }
-            
             VStack(alignment: .leading) {
                 Text(movie.title)
                     .frame(alignment: Alignment.topLeading)

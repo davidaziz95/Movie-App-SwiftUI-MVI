@@ -22,7 +22,7 @@ class MovieRepo {
                         
                     case .success:
                         guard let data = response.data else {
-                            observer.onError(response.error ?? MyError.runtimeError("random message"))
+                            observer.onError(response.error ?? MyError.runtimeError("runtime error"))
                             return
                         }
                         do {
@@ -40,10 +40,10 @@ class MovieRepo {
     
     
     func fetchMovies() -> Observable<Movies> {
-        return createRequest(url: "https://api.themoviedb.org/3/movie/popular?api_key=5ec2b35ce120a5e3a91c05d25a75a3ba&language=en-US&page=2")
+        return createRequest(url: EndPoints.fetchPopularMoviesEndpoint)
     }
     
     func searchMovies(query: String) -> Observable<Movies> {
-        return createRequest(url: "https://api.themoviedb.org/3/search/movie?api_key=5ec2b35ce120a5e3a91c05d25a75a3ba&language=en-US&query=\(query)")
+        return createRequest(url: EndPoints.searchMoviesEndpoint.replacingOccurrences(of: "{query}", with: query))
     }
 }
