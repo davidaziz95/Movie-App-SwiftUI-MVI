@@ -10,7 +10,6 @@ import SwiftUI
 struct HomeView: View {
     
     @State private var loading = true
-    @StateObject private var searchQuery = DebouncedState(initialValue: "")
     @ObservedObject var vm: HomePageViewModel = HomePageViewModel()
     
     var body: some View {
@@ -24,30 +23,25 @@ struct HomeView: View {
                 
             case .Fetched(let moviesResult):
                 return AnyView(
-                    ScrollView(.vertical, showsIndicators: false) {
-                        LazyVStack { ForEach(moviesResult.results) { movie in
-                            NavigationLink {
-                                MovieDetails(movie: movie)
-                            } label: {
+                    List {
+                        ForEach(moviesResult.results) { movie in
+                            ZStack {
                                 MovieCard(movie: movie)
-                                Divider()
-                            }.buttonStyle(FlatLinkStyle())
-                        }
+                                NavigationLink {
+                                    MovieDetails(movie: movie)
+                                } label: {
+                                    EmptyView()
+                                }.opacity(0)
+                            }
                         }
                     }
                 )
             }
         }
-        .searchable(text: $searchQuery.currentValue, prompt: "Find a movie")
-        .onChange(of: searchQuery.debouncedValue) { newValue in
-            if newValue.isEmpty { Task { await  vm.loadMovies()} }
-            else { vm.searchMovies(query: searchQuery.debouncedValue) }
-        }
-        .onAppear {
-            if loading {
-                Task { await  vm.loadMovies()}
-                loading = false
-            }
+        .searchable(text: $vm.searchQuery.currentValue, prompt: "Find a movie")
+        .onChange(of: vm.searchQuery.debouncedValue) { newValue in
+            if newValue.isEmpty { vm.loadMovies() }
+            else { vm.searchMovies() }
         }
     }
 }
