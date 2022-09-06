@@ -10,7 +10,6 @@ import Foundation
 
 struct Movies: Codable {
     var results: [Movie]
-    
 }
 
 struct Movie: Codable, Identifiable {

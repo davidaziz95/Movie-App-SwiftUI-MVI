@@ -23,18 +23,13 @@ struct HomeView: View {
                 
             case .Fetched(let moviesResult):
                 return AnyView(
-                    List {
-                        ForEach(moviesResult.results) { movie in
-                            ZStack {
-                                MovieCard(movie: movie)
-                                NavigationLink {
-                                    MovieDetails(movie: movie)
-                                } label: {
-                                    EmptyView()
-                                }.opacity(0)
-                            }
-                        }
-                    }
+                    List(moviesResult.results, id: \.id) { movie in
+                        NavigationLink {
+                            MovieDetails(movie: movie)
+                        } label: {
+                            MovieCard(movie: movie)
+                        } .buttonStyle(BorderlessButtonStyle())
+                    }.listStyle(.plain)
                 )
             }
         }

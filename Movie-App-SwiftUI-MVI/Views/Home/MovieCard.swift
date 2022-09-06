@@ -28,7 +28,7 @@ struct MovieCard: View {
                         .cornerRadius(20, corners: [.topLeft, .topRight])
                         .frame(width: 80 , height: 50).blendMode(.multiply)
                 }
-                FavoriteButton { print(movie.title) }
+                FavoriteButton { print(movie.title) }.padding(8)
             }
             VStack(alignment: .leading, spacing: 5) {
                 Text(movie.title)
@@ -41,7 +41,6 @@ struct MovieCard: View {
                     .font(.caption2)
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
-                
             }
         }
     }

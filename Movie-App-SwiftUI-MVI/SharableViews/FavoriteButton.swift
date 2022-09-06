@@ -18,7 +18,7 @@ struct FavoriteButton: View {
             favoriteAction()
         } label: {
             Image(systemName: isSelected ? "heart.fill" : "heart")
-                .font(.system(size: 20))
+                .font(.system(size: 25))
                 .foregroundColor(Color.red)
         }
     }
@@ -26,8 +26,6 @@ struct FavoriteButton: View {
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton {
-            print("Favorite Button clicked")
-        }
+        FavoriteButton(favoriteAction: {})
     }
 }
