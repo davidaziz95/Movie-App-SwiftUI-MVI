@@ -14,5 +14,5 @@ struct EndPoints {
     static let moviesApiKey = "5ec2b35ce120a5e3a91c05d25a75a3ba"
     
     static let searchMoviesEndpoint =  moviesBaseUrl + "search/movie?api_key=\(moviesApiKey)&language=en-US&query={query}"
-    static let fetchPopularMoviesEndpoint = moviesBaseUrl + "movie/popular?api_key=5ec2b35ce120a5e3a91c05d25a75a3ba&language=en-US&page=1"
+    static let fetchPopularMoviesEndpoint = moviesBaseUrl + "movie/popular?api_key=\(moviesApiKey)&language=en-US&page=1"
 }
