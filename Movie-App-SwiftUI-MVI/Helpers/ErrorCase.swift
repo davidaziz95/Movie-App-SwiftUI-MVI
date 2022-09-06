@@ -6,8 +6,15 @@
 //
 
 import Foundation
+import Alamofire
 
 
-enum MyError: Error {
-    case runtimeError(String)
+struct NetworkError: Error {
+  let initialError: AFError
+  let backendError: BackendError?
+}
+
+struct BackendError: Codable, Error {
+    var status: String
+    var message: String
 }

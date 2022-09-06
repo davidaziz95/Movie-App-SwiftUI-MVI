@@ -5,50 +5,48 @@
 //  Created by David Aziz [Pharma] on 03/09/2022.
 //
 
-import RxSwift
+import Combine
 import Foundation
 
 class HomePageViewModel: ObservableObject {
     
-    let disposableBag = DisposeBag()
-    let repository: MovieRepo = MovieRepo()
+    let repository: HomePageRepoProtocol
     @Published var uiState: HomePageState = .Init
     
-    func loadMovies() async {
-        self.uiState = .Loading
-        do { try await Task.sleep(nanoseconds: UInt64(1000000000)) }
-        catch {}
-        
-        repository
-            .fetchMovies()
-            .subscribe(
-                onNext: { [weak self] response in
-                    debugPrint(response)
-                    if response.results.isEmpty { self?.uiState = .NoResultsFound }
-                    else { self?.uiState = .Fetched(response) }
-                },
-                onError: { error in
-                    debugPrint(error)
-                    self.uiState = .ApiError("Results could not be fetched")
-                }
-            ).disposed(by: disposableBag)
+    @Published var searchQuery = DebouncedState(initialValue: "")
+    private var disposables: Set<AnyCancellable> = []
+    
+    
+    init(dataManager: HomePageRepoProtocol = HomePageRepo.shared) {
+        self.repository = dataManager
+        loadMovies()
     }
     
-    func searchMovies(query: String) {
+    func loadMovies() {
         self.uiState = .Loading
-        repository
-            .searchMovies(query: query)
-            .subscribe(
-                onNext: { [weak self] response in
-                    debugPrint(response)
-                    if response.results.isEmpty { self?.uiState = .NoResultsFound }
-                    else { self?.uiState = .Fetched(response) }
-                },
-                onError: { error in
-                    debugPrint(error)
-                    self.uiState = .ApiError("Results could not be fetched")
-                }
-            ).disposed(by: disposableBag)
+        
+        repository.fetchMovies().sink { response in
+            if response.error != nil {
+                debugPrint(response.error!)
+                self.uiState = .ApiError("Results could not be fetched")
+            }
+            else if (response.value!.results.isEmpty) { self.uiState = .NoResultsFound }
+            else { self.uiState = .Fetched(response.value!) }
+        }.store(in: &disposables)
+    }
+    
+    
+    func searchMovies() {
+        self.uiState = .Loading
+        
+        repository.searchMovies(query: searchQuery.debouncedValue).sink { response in
+            if response.error != nil {
+                debugPrint(response.error!)
+                self.uiState = .ApiError("Results could not be fetched")
+            }
+            else if (response.value!.results.isEmpty) { self.uiState = .NoResultsFound }
+            else { self.uiState = .Fetched(response.value!) }
+        }.store(in: &disposables)
     }
 }
 
