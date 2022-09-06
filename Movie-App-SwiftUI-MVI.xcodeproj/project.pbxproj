@@ -14,9 +14,6 @@
 		BE9664AF28C2D9C000084A96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9664AE28C2D9C000084A96 /* Preview Assets.xcassets */; };
 		BE9664B628C2E0E500084A96 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664B528C2E0E500084A96 /* HomeView.swift */; };
 		BE9664BE28C2E25100084A96 /* BarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664BD28C2E25100084A96 /* BarModifier.swift */; };
-		BE9664C128C2E38400084A96 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664C028C2E38400084A96 /* RxCocoa */; };
-		BE9664C328C2E38400084A96 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664C228C2E38400084A96 /* RxRelay */; };
-		BE9664C528C2E38400084A96 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664C428C2E38400084A96 /* RxSwift */; };
 		BE9664C928C2E41400084A96 /* HomePageRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664C828C2E41400084A96 /* HomePageRepo.swift */; };
 		BE9664CC28C2E42E00084A96 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9664CB28C2E42E00084A96 /* MovieModel.swift */; };
 		BE9664CF28C2E77000084A96 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BE9664CE28C2E77000084A96 /* Alamofire */; };
@@ -63,10 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9664C528C2E38400084A96 /* RxSwift in Frameworks */,
 				BE9664CF28C2E77000084A96 /* Alamofire in Frameworks */,
-				BE9664C328C2E38400084A96 /* RxRelay in Frameworks */,
-				BE9664C128C2E38400084A96 /* RxCocoa in Frameworks */,
 				BE9664D828C2EFB200084A96 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,9 +208,6 @@
 			);
 			name = "Movie-App-SwiftUI-MVI";
 			packageProductDependencies = (
-				BE9664C028C2E38400084A96 /* RxCocoa */,
-				BE9664C228C2E38400084A96 /* RxRelay */,
-				BE9664C428C2E38400084A96 /* RxSwift */,
 				BE9664CE28C2E77000084A96 /* Alamofire */,
 				BE9664D728C2EFB200084A96 /* Kingfisher */,
 			);
@@ -249,7 +240,6 @@
 			);
 			mainGroup = BE96649B28C2D9BE00084A96;
 			packageReferences = (
-				BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BE9664CD28C2E77000084A96 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BE9664D628C2EFB200084A96 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
@@ -501,14 +491,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 		BE9664CD28C2E77000084A96 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -528,21 +510,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BE9664C028C2E38400084A96 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		BE9664C228C2E38400084A96 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		BE9664C428C2E38400084A96 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BE9664BF28C2E38400084A96 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		BE9664CE28C2E77000084A96 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BE9664CD28C2E77000084A96 /* XCRemoteSwiftPackageReference "Alamofire" */;
